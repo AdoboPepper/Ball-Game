@@ -10,6 +10,7 @@ public class GamePlayController : MonoBehaviour
     public bool gamePlaying;
 
     [SerializeField]private GameObject tile;
+    [SerializeField] AudioSource collectSound;
     private Vector3 currentTilePosition;
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class GamePlayController : MonoBehaviour
     {
         MakeSingleton();
         currentTilePosition = new Vector3(-2, 0, 2);
+        collectSound = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -25,6 +27,11 @@ public class GamePlayController : MonoBehaviour
         {
             CreateTiles();
         }
+    }
+
+    public void PlayCollectibleSound() 
+    {
+     collectSound.Play();
     }
 
     void OnDisable()

@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
 
     private Vector3 oldPosition;
 
+    
+
     private void Awake()
     {
         ballTarget = GameObject.FindGameObjectWithTag("Ball").transform;
@@ -26,6 +28,7 @@ public class CameraController : MonoBehaviour
             oldPosition = newPosition;
         }
     }
+
 
 }
 

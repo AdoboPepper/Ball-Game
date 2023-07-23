@@ -59,9 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GamePlayController.cs" />
+    <Compile Include="Assets\Scripts\GemScript.cs" />
     <Compile Include="Assets\Scripts\Camera Controller.cs" />
+    <Compile Include="Assets\Scripts\gemHover.cs" />
+    <Compile Include="Assets\Scripts\GemRotate.cs" />
     <Compile Include="Assets\Scripts\Ball Script.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
+    <Compile Include="Assets\Scripts\CollectibleScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

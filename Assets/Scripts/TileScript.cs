@@ -5,7 +5,12 @@ using UnityEngine;
 public class TileScript : MonoBehaviour
 {
     private Rigidbody myBody;
-    [SerializeField]private AudioSource audio;
+    [SerializeField]private AudioSource fall;
+
+    [SerializeField]private GameObject gem;
+
+    [SerializeField] private float chanceForCollectible;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -13,11 +18,20 @@ public class TileScript : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        if (Random.value < chanceForCollectible)
+        {
+            Vector3 temp = transform.position;
+            temp.y += 2f;
+            Instantiate(gem, temp, Quaternion.identity);
+        }
+    }
     IEnumerator TriggerFallingDown()
     {
         yield return new WaitForSeconds(0.3f);
         myBody.isKinematic = false;
-        audio.Play();
+        fall.Play();
         StartCoroutine(TurnOffGameObject());
     }
 
@@ -32,6 +46,11 @@ public class TileScript : MonoBehaviour
         if (target.tag == "Ball")
         {
             StartCoroutine(TriggerFallingDown());
+        }
+
+        if (target.tag == "Collectible")
+        {
+            //collect.Play();
         }
     }
 }

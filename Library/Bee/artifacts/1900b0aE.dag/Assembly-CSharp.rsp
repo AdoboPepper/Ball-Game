@@ -354,7 +354,11 @@
 -analyzer:"D:/Programs/2022.3.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Ball Script.cs"
 "Assets/Scripts/Camera Controller.cs"
+"Assets/Scripts/CollectibleScript.cs"
 "Assets/Scripts/GamePlayController.cs"
+"Assets/Scripts/gemHover.cs"
+"Assets/Scripts/GemRotate.cs"
+"Assets/Scripts/GemScript.cs"
 "Assets/Scripts/TileScript.cs"
 -langversion:9.0
 

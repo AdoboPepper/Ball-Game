@@ -39,6 +39,17 @@ public class BallMovement : MonoBehaviour
             
         }
     }
+    void CheckedBallOutOfBounds()
+    {
+        if (GamePlayController.instance.gamePlaying)
+        {
+            if(transform.position.y < -4)
+            {
+                GamePlayController.instance.gamePlaying = false;
+                Destroy(gameObject);
+            }
+        }
+    }
 
     void CheckInput()
     {
